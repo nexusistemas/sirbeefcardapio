@@ -253,11 +253,11 @@
       "is_kiosk": false,
       "is_custom": false,
       "active": true,
-      "status": "LIVRE",
+      "status": "OCUPADA",
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-16",
-      "current_total": 0,
-      "updated_at": "17:39"
+      "current_total": 36,
+      "updated_at": "17:40"
     },
     {
       "id": 17,
@@ -470,5 +470,5 @@
       "updated_at": "17:39"
     }
   ],
-  "updated_at": "2026-11-06T17:39:37-03:00"
+  "updated_at": "2026-11-06T17:40:23-03:00"
 }
