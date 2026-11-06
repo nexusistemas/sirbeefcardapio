@@ -1,18 +1,19 @@
 {
   "apk_direct_url": "https://raw.githubusercontent.com/nexusistemas/nexusistemas.github.io/main/NexuSistemas-SuperApp.apk",
   "apk_fixed_url": "https://nexusistemas.github.io/apk",
-  "apk_version_code": 71,
-  "apk_version_name": "5.0.1",
+  "apk_version_code": 72,
+  "apk_version_name": "5.0.2",
   "cardapio_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio",
   "hostname_url": "http://gui",
   "lan_ips": [
-    "192.168.1.36"
+    "192.168.0.69",
+    "192.168.18.53"
   ],
-  "lan_no_port_url": "http://192.168.1.36",
-  "lan_url": "http://192.168.1.36:8080",
+  "lan_no_port_url": "http://192.168.0.69",
+  "lan_url": "http://192.168.0.69:8080",
   "mesa_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio/mesa",
-  "pdv_fixed_url": "https://nexusistemas.github.io/pdv",
-  "rastreio_fixed_url": "https://nexusistemas.github.io/rastreio",
-  "tunnel_url": "https://italic-grams-fewer-forests.trycloudflare.com",
-  "updated_at": "2026-11-06T17:40:23-03:00"
+  "pdv_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio/pdv",
+  "rastreio_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio/rastreio",
+  "tunnel_url": "https://brilliant-relax-stephanie-jelsoft.trycloudflare.com",
+  "updated_at": "2026-11-06T19:37:45-03:00"
 }
