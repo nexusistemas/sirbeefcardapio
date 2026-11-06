@@ -1,0 +1,12 @@
+{
+    "apk_file_name":  "NexuSistemas-SuperApp.apk",
+    "release_notes":  "v5.0.0 (Build #70): Fechamento de Comanda no Kiosk (Exigir Scanner p/ Cartao QR Code e Busca Exclusiva p/ Nome+Celular) + Update do APK via 4G/Nuvem sem Re-Baixar Mesma Versao.",
+    "version_code":  70,
+    "version":  "5.0.0",
+    "cloud_raw_url":  "https://raw.githubusercontent.com/nexusistemas/sirbeefcardapio/main/apk/NexuSistemas-SuperApp.apk",
+    "cloud_download_url":  "https://nexusistemas.github.io/sirbeefcardapio/apk/NexuSistemas-SuperApp.apk",
+    "file_size_bytes":  3676201,
+    "built_at":  "06/11/2026 14:52:26",
+    "version_name":  "5.0.0",
+    "force_update":  false
+}
