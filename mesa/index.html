@@ -776,12 +776,9 @@
       }
     }
 
-    async function discoverLiveTunnelBase(forceRefresh) {
-      if (forceRefresh) {
-        resolvedTunnelBase = '';
-      }
+    async function discoverLiveTunnelBase() {
       if (resolvedTunnelBase) return resolvedTunnelBase;
-      if (resolvingPromise && !forceRefresh) return resolvingPromise;
+      if (resolvingPromise) return resolvingPromise;
       resolvingPromise = (async () => {
         const ts = Date.now();
         const hostOwner = window.location.hostname.split('.')[0] || 'nexusistemas';
@@ -791,8 +788,6 @@
           ? firstSeg
           : 'sirbeefcardapio';
         const candidates = [
-          `https://api.github.com/repos/${hostOwner}/${repoGuess}/contents/tunnel.json?t=${ts}`,
-          `https://api.github.com/repos/${hostOwner}/${hostOwner}.github.io/contents/tunnel.json?t=${ts}`,
           `https://raw.githubusercontent.com/${hostOwner}/${repoGuess}/main/tunnel.json?t=${ts}`,
           `https://raw.githubusercontent.com/${hostOwner}/${hostOwner}.github.io/main/tunnel.json?t=${ts}`,
           `https://raw.githubusercontent.com/nexusistemas/sirbeefcardapio/main/tunnel.json?t=${ts}`,
@@ -800,7 +795,9 @@
           `./tunnel.json?t=${ts}`,
           `../tunnel.json?t=${ts}`,
           `/sirbeefcardapio/tunnel.json?t=${ts}`,
-          `/tunnel.json?t=${ts}`
+          `/tunnel.json?t=${ts}`,
+          `https://api.github.com/repos/${hostOwner}/${repoGuess}/contents/tunnel.json?t=${ts}`,
+          `https://api.github.com/repos/${hostOwner}/${hostOwner}.github.io/contents/tunnel.json?t=${ts}`
         ];
         const testedBases = new Set();
         for (const u of candidates) {
@@ -837,27 +834,17 @@
       return out;
     }
 
-    discoverLiveTunnelBase(false);
-    setInterval(() => { discoverLiveTunnelBase(true); }, 20000);
+    discoverLiveTunnelBase();
+    setInterval(() => { resolvedTunnelBase = ''; discoverLiveTunnelBase(); }, 25000);
 
     window.fetch = async function(input, init) {
       let urlStr = typeof input === 'string' ? input : (input && input.url ? input.url : '');
       if (urlStr.startsWith('/api/') || urlStr.startsWith('api/')) {
-        const cleanPath = urlStr.startsWith('/') ? urlStr : ('/' + urlStr);
-        let base = resolvedTunnelBase || (await discoverLiveTunnelBase(false));
+        const base = resolvedTunnelBase || (await discoverLiveTunnelBase());
         if (base) {
-          try {
-            const r1 = await origFetch(base + cleanPath, init);
-            if (r1 && r1.status !== 405 && r1.status < 502) {
-              return r1;
-            }
-          } catch (_) {}
-        }
-        base = await discoverLiveTunnelBase(true);
-        if (base) {
+          const cleanPath = urlStr.startsWith('/') ? urlStr : ('/' + urlStr);
           return origFetch(base + cleanPath, init);
         }
-        throw new Error('TUNNEL_OFFLINE');
       }
       return origFetch(input, init);
     };
