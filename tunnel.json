@@ -1,9 +1,9 @@
 {
   "apk_direct_url": "https://raw.githubusercontent.com/nexusistemas/nexusistemas.github.io/main/NexuSistemas-SuperApp.apk",
   "apk_fixed_url": "https://nexusistemas.github.io/apk",
-  "apk_version_code": 62,
-  "apk_version_name": "4.8.2",
-  "cardapio_fixed_url": "https://nexusistemas.github.io/cardapio",
+  "apk_version_code": 63,
+  "apk_version_name": "4.8.3",
+  "cardapio_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio",
   "hostname_url": "http://gui",
   "lan_ips": [
     "192.168.18.29",
@@ -11,9 +11,9 @@
   ],
   "lan_no_port_url": "http://192.168.18.29",
   "lan_url": "http://192.168.18.29:8080",
-  "mesa_fixed_url": "https://nexusistemas.github.io/mesa",
+  "mesa_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio/mesa",
   "pdv_fixed_url": "https://nexusistemas.github.io/pdv",
   "rastreio_fixed_url": "https://nexusistemas.github.io/rastreio",
   "tunnel_url": "https://economies-jean-tim-charles.trycloudflare.com",
-  "updated_at": "2026-11-06T13:28:56-03:00"
+  "updated_at": "2026-11-06T14:22:52-03:00"
 }
