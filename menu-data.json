@@ -3,17 +3,17 @@
     "client_logo_base64": "/assets/logos/SIR BEEF 2.png",
     "client_name": "SIR BEEF",
     "company_name": "SIR BEEF",
-    "delivery_menu_url": "https://nexusistemas.github.io/sirbeefcardapio/cardapio",
+    "delivery_menu_url": "https://nexusistemas.github.io/sirbeefcardapio",
     "logo_url": "/assets/logos/SIR BEEF 2.png",
     "modules": {
-      "module_counter": false,
-      "module_delivery": false,
+      "module_counter": true,
+      "module_delivery": true,
       "module_individual_tabs": true,
-      "module_kiosk": false,
-      "module_kitchen_menu": false,
-      "module_market": false,
+      "module_kiosk": true,
+      "module_kitchen_menu": true,
+      "module_market": true,
       "module_pickup": true,
-      "module_tables_qr": false
+      "module_tables_qr": true
     },
     "primary_color": "#d4af37",
     "secondary_color": "",
@@ -32,8 +32,8 @@
         "status": "LIVRE",
         "waiter_call": false,
         "qr_token": "",
-        "current_total": 0,
-        "updated_at": "11:29"
+        "current_total": 45,
+        "updated_at": "15:33"
       },
       {
         "id": 2,
@@ -48,7 +48,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 3,
@@ -63,7 +63,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 4,
@@ -78,7 +78,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 5,
@@ -93,7 +93,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 6,
@@ -108,7 +108,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 7,
@@ -123,7 +123,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 8,
@@ -138,7 +138,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 9,
@@ -153,7 +153,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 10,
@@ -168,7 +168,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 11,
@@ -183,7 +183,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 12,
@@ -198,7 +198,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 13,
@@ -213,7 +213,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 14,
@@ -228,7 +228,7 @@
         "waiter_call": false,
         "qr_token": "",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 15,
@@ -242,8 +242,8 @@
         "status": "OCUPADA",
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-15",
-        "current_total": 93,
-        "updated_at": "11:29"
+        "current_total": 106,
+        "updated_at": "15:33"
       },
       {
         "id": 16,
@@ -254,11 +254,11 @@
         "is_kiosk": false,
         "is_custom": false,
         "active": true,
-        "status": "OCUPADA",
+        "status": "LIVRE",
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-16",
-        "current_total": 36,
-        "updated_at": "11:29"
+        "current_total": 0,
+        "updated_at": "15:33"
       },
       {
         "id": 17,
@@ -273,7 +273,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-17",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 18,
@@ -288,7 +288,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-18",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 19,
@@ -303,7 +303,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-19",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 20,
@@ -318,7 +318,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-20",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 21,
@@ -333,7 +333,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-21",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 22,
@@ -348,7 +348,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-22",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 23,
@@ -363,7 +363,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-23",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 24,
@@ -378,7 +378,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-24",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 25,
@@ -393,7 +393,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-25",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 26,
@@ -408,7 +408,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-26",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 27,
@@ -423,7 +423,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-27",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 28,
@@ -438,7 +438,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-28",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 29,
@@ -453,7 +453,7 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-29",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       },
       {
         "id": 30,
@@ -468,10 +468,10 @@
         "waiter_call": false,
         "qr_token": "SIRBEEF-MESA-30",
         "current_total": 0,
-        "updated_at": "11:29"
+        "updated_at": "15:33"
       }
     ],
-    "updated_at": "2026-11-06T11:29:35-03:00"
+    "updated_at": "2026-11-06T15:33:42-03:00"
   },
   "catalog": [
     {
@@ -27356,8 +27356,8 @@
       "status": "LIVRE",
       "waiter_call": false,
       "qr_token": "",
-      "current_total": 0,
-      "updated_at": "11:29"
+      "current_total": 45,
+      "updated_at": "15:33"
     },
     {
       "id": 2,
@@ -27372,7 +27372,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 3,
@@ -27387,7 +27387,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 4,
@@ -27402,7 +27402,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 5,
@@ -27417,7 +27417,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 6,
@@ -27432,7 +27432,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 7,
@@ -27447,7 +27447,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 8,
@@ -27462,7 +27462,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 9,
@@ -27477,7 +27477,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 10,
@@ -27492,7 +27492,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 11,
@@ -27507,7 +27507,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 12,
@@ -27522,7 +27522,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 13,
@@ -27537,7 +27537,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 14,
@@ -27552,7 +27552,7 @@
       "waiter_call": false,
       "qr_token": "",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 15,
@@ -27566,8 +27566,8 @@
       "status": "OCUPADA",
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-15",
-      "current_total": 93,
-      "updated_at": "11:29"
+      "current_total": 106,
+      "updated_at": "15:33"
     },
     {
       "id": 16,
@@ -27578,11 +27578,11 @@
       "is_kiosk": false,
       "is_custom": false,
       "active": true,
-      "status": "OCUPADA",
+      "status": "LIVRE",
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-16",
-      "current_total": 36,
-      "updated_at": "11:29"
+      "current_total": 0,
+      "updated_at": "15:33"
     },
     {
       "id": 17,
@@ -27597,7 +27597,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-17",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 18,
@@ -27612,7 +27612,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-18",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 19,
@@ -27627,7 +27627,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-19",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 20,
@@ -27642,7 +27642,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-20",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 21,
@@ -27657,7 +27657,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-21",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 22,
@@ -27672,7 +27672,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-22",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 23,
@@ -27687,7 +27687,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-23",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 24,
@@ -27702,7 +27702,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-24",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 25,
@@ -27717,7 +27717,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-25",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 26,
@@ -27732,7 +27732,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-26",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 27,
@@ -27747,7 +27747,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-27",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 28,
@@ -27762,7 +27762,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-28",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 29,
@@ -27777,7 +27777,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-29",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     },
     {
       "id": 30,
@@ -27792,7 +27792,7 @@
       "waiter_call": false,
       "qr_token": "SIRBEEF-MESA-30",
       "current_total": 0,
-      "updated_at": "11:29"
+      "updated_at": "15:33"
     }
   ]
 }

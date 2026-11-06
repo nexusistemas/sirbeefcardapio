@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- NEXUS_FIXED_URL_SHELL_V7 -->
+<!-- NEXUS_FIXED_URL_SHELL_V8 -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -61,7 +61,7 @@
   <div id="sbSplash">
     <div class="spinner"></div>
     <div style="font-size:17px;font-weight:800;letter-spacing:0.5px;">🍽️ SIR BEEF</div>
-    <div id="sbStatusText" style="color:#9ca3af;font-size:13px;margin-top:6px;">Conectando ao Cardápio em Tempo Real (4G / Wi-Fi)...</div>
+    <div id="sbStatusText" style="color:#9ca3af;font-size:13px;margin-top:6px;">Conectando em Tempo Real (4G / Wi-Fi)...</div>
   </div>
   <iframe
     id="sbLiveFrame"
@@ -75,7 +75,6 @@
       const GH_REPO = "sirbeefcardapio";
       const frame = document.getElementById("sbLiveFrame");
       const splash = document.getElementById("sbSplash");
-      const statusText = document.getElementById("sbStatusText");
       let activeTunnelBase = "";
       let isChecking = false;
 
@@ -85,12 +84,44 @@
         }
       });
 
+      async function probeEndpointHealth(baseUrl) {
+        if (!baseUrl) return false;
+        const clean = String(baseUrl).replace(/\/$/, "");
+        const ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+        const tid = ctrl ? setTimeout(function() { ctrl.abort(); }, 3500) : null;
+        try {
+          const r = await fetch(clean + "/api/health?t=" + Date.now(), {
+            cache: "no-store",
+            signal: ctrl ? ctrl.signal : undefined
+          });
+          if (tid) clearTimeout(tid);
+          return !!(r && r.ok);
+        } catch (e) {
+          if (tid) clearTimeout(tid);
+          return false;
+        }
+      }
+
       async function fetchTunnelData() {
+        const ts = Date.now();
+        const rawCandidates = [
+          "https://raw.githubusercontent.com/" + GH_OWNER + "/" + GH_REPO + "/main/tunnel.json?t=" + ts,
+          "https://raw.githubusercontent.com/" + GH_OWNER + "/" + GH_OWNER + ".github.io/main/tunnel.json?t=" + ts,
+          "https://raw.githubusercontent.com/nexusistemas/sirbeefcardapio/main/tunnel.json?t=" + ts,
+          "https://raw.githubusercontent.com/nexusistemas/nexusistemas.github.io/main/tunnel.json?t=" + ts
+        ];
+        for (const u of rawCandidates) {
+          try {
+            const rRaw = await fetch(u, { cache: "no-store" });
+            if (rRaw.ok) {
+              const j = await rRaw.json();
+              if (j && (j.tunnel_url || j.lan_url)) return j;
+            }
+          } catch (e) {}
+        }
         const apiCandidates = [
-          "https://api.github.com/repos/" + GH_OWNER + "/" + GH_OWNER + ".github.io/contents/tunnel.json?t=" + Date.now(),
-          "https://api.github.com/repos/" + GH_OWNER + "/" + GH_REPO + "/contents/tunnel.json?t=" + Date.now(),
-          "https://api.github.com/repos/nexusistemas/nexusistemas.github.io/contents/tunnel.json?t=" + Date.now(),
-          "https://api.github.com/repos/nexusistemas/sirbeefcardapio/contents/tunnel.json?t=" + Date.now()
+          "https://api.github.com/repos/" + GH_OWNER + "/" + GH_REPO + "/contents/tunnel.json?t=" + ts,
+          "https://api.github.com/repos/" + GH_OWNER + "/" + GH_OWNER + ".github.io/contents/tunnel.json?t=" + ts
         ];
         for (const u of apiCandidates) {
           try {
@@ -100,38 +131,43 @@
             });
             if (rApi.ok) {
               const j = await rApi.json();
-              if (j && j.tunnel_url) return j;
+              if (j && (j.tunnel_url || j.lan_url)) return j;
             }
           } catch (e) {}
         }
-        for (const rel of ["/tunnel.json", "./tunnel.json", "../tunnel.json"]) {
+        for (const rel of ["./tunnel.json", "../tunnel.json", "/tunnel.json"]) {
           try {
-            const rPages = await fetch(rel + "?t=" + Date.now(), { cache: "no-store" });
+            const rPages = await fetch(rel + "?t=" + ts, { cache: "no-store" });
             if (rPages.ok) {
               const j2 = await rPages.json();
-              if (j2 && j2.tunnel_url) return j2;
+              if (j2 && (j2.tunnel_url || j2.lan_url)) return j2;
             }
           } catch (e2) {}
         }
         return null;
       }
 
-      async function syncTunnelAndLoad(isInitial) {
+      async function syncTunnelAndLoad() {
         if (isChecking) return;
         isChecking = true;
         try {
           const d = await fetchTunnelData();
           if (!d) return;
-          const newBase = (d && d.tunnel_url ? d.tunnel_url : "").replace(/\/$/, "");
-          if (newBase && newBase.startsWith("https://")) {
-            if (newBase !== activeTunnelBase) {
-              activeTunnelBase = newBase;
+          const candidates = [];
+          if (d.tunnel_url) candidates.push(String(d.tunnel_url).replace(/\/$/, ""));
+          if (d.lan_url) candidates.push(String(d.lan_url).replace(/\/$/, ""));
+          for (const cand of candidates) {
+            if (!cand) continue;
+            if (cand === activeTunnelBase) return;
+            const alive = await probeEndpointHealth(cand);
+            if (alive) {
+              activeTunnelBase = cand;
               const qs = window.location.search || "";
               const hash = window.location.hash || "";
               frame.src = activeTunnelBase + ROUTE_PATH + qs + hash;
-              setTimeout(function() { splash.classList.add("hidden"); }, 1200);
+              setTimeout(function() { splash.classList.add("hidden"); }, 900);
+              return;
             }
-            return;
           }
         } catch (e) {
         } finally {
@@ -139,8 +175,8 @@
         }
       }
 
-      syncTunnelAndLoad(true);
-      setInterval(function() { syncTunnelAndLoad(false); }, 10000);
+      syncTunnelAndLoad();
+      setInterval(function() { syncTunnelAndLoad(); }, 10000);
     })();
   </script>
 </body>

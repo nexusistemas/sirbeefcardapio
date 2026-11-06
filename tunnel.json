@@ -1,8 +1,8 @@
 {
   "apk_direct_url": "https://raw.githubusercontent.com/nexusistemas/nexusistemas.github.io/main/NexuSistemas-SuperApp.apk",
   "apk_fixed_url": "https://nexusistemas.github.io/apk",
-  "apk_version_code": 70,
-  "apk_version_name": "5.0.0",
+  "apk_version_code": 71,
+  "apk_version_name": "5.0.1",
   "cardapio_fixed_url": "https://nexusistemas.github.io/sirbeefcardapio",
   "hostname_url": "http://gui",
   "lan_ips": [
@@ -15,5 +15,5 @@
   "pdv_fixed_url": "https://nexusistemas.github.io/pdv",
   "rastreio_fixed_url": "https://nexusistemas.github.io/rastreio",
   "tunnel_url": "https://photography-show-automotive-alleged.trycloudflare.com",
-  "updated_at": "2026-11-06T14:53:10-03:00"
+  "updated_at": "2026-11-06T15:33:42-03:00"
 }

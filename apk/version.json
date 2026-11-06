@@ -1,19 +1,19 @@
 {
   "apk_file_name": "NexuSistemas-SuperApp.apk",
-  "apk_timestamp": 1793987545,
-  "base_version_code": 70,
-  "built_at": "06/11/2026 14:52:25",
+  "apk_timestamp": 1793989987,
+  "base_version_code": 71,
+  "built_at": "06/11/2026 15:33:07",
   "cloud_download_url": "https://nexusistemas.github.io/sirbeefcardapio/apk/NexuSistemas-SuperApp.apk",
   "cloud_raw_url": "https://raw.githubusercontent.com/nexusistemas/sirbeefcardapio/main/apk/NexuSistemas-SuperApp.apk",
-  "download_path": "/NexuSistemas-SuperApp.apk?t=1793987545",
-  "download_url": "http://192.168.18.29:8080/NexuSistemas-SuperApp.apk?t=1793987545",
+  "download_path": "/NexuSistemas-SuperApp.apk?t=1793989987",
+  "download_url": "http://192.168.18.29:8080/NexuSistemas-SuperApp.apk?t=1793989987",
   "external_tunnel_url": "https://photography-show-automotive-alleged.trycloudflare.com",
-  "file_size_bytes": 3676201,
+  "file_size_bytes": 6183743,
   "force_update": false,
   "lan_ip": "192.168.18.29:8080",
   "manual_force": false,
   "release_notes": "v5.0.0 (Build #70): Fechamento de Comanda no Kiosk (Exigir Scanner p/ Cartao QR Code e Busca Exclusiva p/ Nome+Celular) + Update do APK via 4G/Nuvem sem Re-Baixar Mesma Versao.",
-  "version": "5.0.0",
-  "version_code": 70,
-  "version_name": "5.0.0"
+  "version": "5.0.1",
+  "version_code": 71,
+  "version_name": "5.0.1"
 }
